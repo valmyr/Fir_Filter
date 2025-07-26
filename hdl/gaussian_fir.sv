@@ -10,7 +10,7 @@ module gaussian_fir #(parameter WIDTH = 8, NCOEFS = 300)(
     logic [WIDTH-1:0] soma [NCOEFS-1:0];
 
 
-    initial $readmemh("coefs_ponto_fixo_q8.txt",coefs);
+    initial $readmemh("../txt/coefs_ponto_fixo_q8.txt",coefs);
     assign yn_inter[0] = xn;
     assign soma[0] = 0;
      generate

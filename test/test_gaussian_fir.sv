@@ -11,7 +11,7 @@ module tb;
                         .yn(yn)    
     );
     initial begin
-        $readmemh("sin.txt",sinal);
+        $readmemh("../txt/sin.txt",sinal);
         clock = 0;
         nreset = 1;
         #100us
