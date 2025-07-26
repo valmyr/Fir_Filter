@@ -1,4 +1,9 @@
-.
+## Resposta ao Impulso Finata FIR
+
+<img src="./imge/fir_filter_04.gif" alt="FIR Diagram" style="background-color: gray">
+
+## Estrutura de Arquivos
+```
 ├── hdl
 │   ├── base_fir.sv
 │   └── gaussian_fir.sv
