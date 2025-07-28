@@ -10,25 +10,21 @@ module gaussian_fir #(parameter WIDTH = 8, NCOEFS = 300)(
     logic [WIDTH-1:0] soma [NCOEFS-1:0];
 
 
-    initial $readmemh("../txt/coefs_ponto_fixo_q8.txt",coefs);
+    initial $readmemh("txt/coefs_ponto_fixo_q8.txt",coefs);
     assign yn_inter[0] = xn;
     assign soma[0] = 0;
-     generate
+    generate
         genvar i;
         for(i = 1; i < NCOEFS; i++)begin: FFD
             ffd #(.WIDTH(WIDTH)) ffd1s(.clock(clock),.nreset(nreset),.xn(yn_inter[i-1]),.yn(yn_inter[i]));
         end
     endgenerate
 
-  generate
-
+    generate
         for(i = 1; i < NCOEFS; i++)begin: SUM
             sum #(.WIDTH(WIDTH)) sum1s(.A(soma[i-1]),.B(yn_inter[i-1]*coefs[i-1]),.C(soma[i]));
         end
     endgenerate
-
-
-
  assign yn = soma[NCOEFS-1];
 
     

@@ -10,8 +10,10 @@ module tb;
                         .xn(xn),
                         .yn(yn)    
     );
+
+    //txt/coefs_ponto_fixo_q8.txt
     initial begin
-        $readmemh("../txt/sin.txt",sinal);
+        $readmemh("txt/wave_1s_0s.txt",sinal);
         clock = 0;
         nreset = 1;
         #100us
@@ -21,7 +23,7 @@ module tb;
         clock = 1;
         nreset =1;
 
-        #400000us $finish;
+        #10000000us $finish;
     end
 
     always #100us clock =~clock;
@@ -30,9 +32,9 @@ module tb;
             coun <= 0;
         end
         else begin
-             xn <= sinal[coun];
+             xn <= coun == 0? 0: coun <30 ? 100 :10;//sinal[coun];
              coun <= coun +1;
-             if(coun==1000)$finish;
+             if(coun==10000)$finish;
         end
     end
 

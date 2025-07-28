@@ -5,7 +5,7 @@
 #
 # You can restore this configuration with:
 #
-#      xrun gaussian_fir.sv base_fir.sv test_gaussian_fir.sv -access +rw -input restore.tcl
+#      xrun test/test_gaussian_fir.sv hdl/base_fir.sv hdl/gaussian_fir.sv -access +rw -input restore.tcl
 #
 
 set tcl_prompt1 {puts -nonewline "xcelium> "}
@@ -56,5 +56,6 @@ alias indago verisium
 alias quit exit
 database -open -shm -into waves.shm waves -default
 probe -create -database waves tb.fir.clock tb.fir.coefs tb.fir.nreset tb.fir.soma tb.fir.xn tb.fir.yn tb.fir.yn_inter
+probe -create -database waves tb.clock tb.coun tb.nreset tb.sinal tb.xn tb.yn
 
 simvision -input restore.tcl.svcf

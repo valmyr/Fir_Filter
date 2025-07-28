@@ -1,10 +1,10 @@
-# SimVision Command Script (Fri Jul 25 10:40:50 PM -03 2025)
+# SimVision Command Script (Mon Jul 28 12:45:01 -03 2025)
 #
 # Version 24.03.s005
 #
 # You can restore this configuration with:
 #
-#      xrun gaussian_fir.sv base_fir.sv test_gaussian_fir.sv -access +rw -input restore.tcl
+#      xrun test/test_gaussian_fir.sv hdl/base_fir.sv hdl/gaussian_fir.sv -access +rw -input restore.tcl
 #
 
 
@@ -62,7 +62,7 @@ preferences set toolbar-TimeSearch-WatchWindow {
 # Simulator
 #
 database require simulator -hints {
-	simulator "xrun gaussian_fir.sv base_fir.sv test_gaussian_fir.sv -gui -access +rw -input restore.tcl"
+	simulator "xrun test/test_gaussian_fir.sv hdl/base_fir.sv hdl/gaussian_fir.sv -gui -access +rw -input restore.tcl"
 }
 
 #
@@ -97,12 +97,12 @@ if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1920x1026+0+0}] !
 }
 window target "Waveform 1" on
 waveform using {Waveform 1}
-waveform sidebar visibility partial
+waveform sidebar select designbrowser
 waveform set \
     -primarycursor TimeA \
     -signalnames name \
     -signalwidth 175 \
-    -units ns \
+    -units us \
     -valuewidth 75
 waveform baseline set -time 0
 
@@ -116,29 +116,57 @@ set id [waveform add -signals [subst  {
 	{simulator::[format {tb.fir.clock}]}
 	} ]]
 set id [waveform add -signals [subst  {
-	{simulator::[format {tb.fir.coefs[8:0]}]}
+	{simulator::[format {tb.fir.coefs[28:0]}]}
 	} ]]
 set id [waveform add -signals [subst  {
 	{simulator::[format {tb.fir.nreset}]}
 	} ]]
 set id [waveform add -signals [subst  {
-	{simulator::[format {tb.fir.soma[8:0]}]}
+	{simulator::[format {tb.fir.soma[28:0]}]}
 	} ]]
 set id [waveform add -signals [subst  {
 	{simulator::[format {tb.fir.xn[31:0]}]}
 	} ]]
-waveform format $id -height 204 -trace analogSampleAndHold -color #ff0000
-waveform axis range $id -for default -min 0 -max 10 -scale linear
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 100 -scale linear
 set id [waveform add -signals [subst  {
 	{simulator::[format {tb.fir.yn[31:0]}]}
 	} ]]
-waveform format $id -height 230 -trace analogSampleAndHold -color #0099ff -bgcolor #000000
-waveform axis range $id -for default -min 0 -max 770 -scale linear
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 22800 -scale linear
 set id [waveform add -signals [subst  {
-	{simulator::[format {tb.fir.yn_inter[8:0]}]}
+	{simulator::[format {tb.fir.yn_inter[28:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.NCOEFS}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.SIZE_SIN}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.WIDTH}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.clock}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.coun[31:0]}]}
+	} ]]
+waveform format $id -radix %d
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.nreset}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.sinal[999:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.xn[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {tb.yn[31:0]}]}
 	} ]]
 
-waveform xview limits 0 102ns
+waveform xview limits 0 8000us
 
 #
 # Waveform Window Links
