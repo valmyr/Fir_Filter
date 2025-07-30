@@ -1,0 +1,579 @@
+|gaussian_fir
+clock => clock.IN9
+nreset => nreset.IN9
+xn[0] => zn_delay[0][0].IN1
+xn[1] => zn_delay[0][1].IN1
+xn[2] => zn_delay[0][2].IN1
+xn[3] => zn_delay[0][3].IN1
+xn[4] => zn_delay[0][4].IN1
+xn[5] => zn_delay[0][5].IN1
+xn[6] => zn_delay[0][6].IN1
+xn[7] => zn_delay[0][7].IN1
+yn[0] <= sum:SUM[8].sum1s.C
+yn[1] <= sum:SUM[8].sum1s.C
+yn[2] <= sum:SUM[8].sum1s.C
+yn[3] <= sum:SUM[8].sum1s.C
+yn[4] <= sum:SUM[8].sum1s.C
+yn[5] <= sum:SUM[8].sum1s.C
+yn[6] <= sum:SUM[8].sum1s.C
+yn[7] <= sum:SUM[8].sum1s.C
+
+
+|gaussian_fir|ffd:FFD[0].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|ffd:FFD[1].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|ffd:FFD[2].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|ffd:FFD[3].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|ffd:FFD[4].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|ffd:FFD[5].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|ffd:FFD[6].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|ffd:FFD[7].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|ffd:FFD[8].ffd1s
+clock => yn[0]~reg0.CLK
+clock => yn[1]~reg0.CLK
+clock => yn[2]~reg0.CLK
+clock => yn[3]~reg0.CLK
+clock => yn[4]~reg0.CLK
+clock => yn[5]~reg0.CLK
+clock => yn[6]~reg0.CLK
+clock => yn[7]~reg0.CLK
+nreset => yn[0]~reg0.ACLR
+nreset => yn[1]~reg0.ACLR
+nreset => yn[2]~reg0.ACLR
+nreset => yn[3]~reg0.ACLR
+nreset => yn[4]~reg0.ACLR
+nreset => yn[5]~reg0.ACLR
+nreset => yn[6]~reg0.ACLR
+nreset => yn[7]~reg0.ACLR
+xn[0] => yn[0]~reg0.DATAIN
+xn[1] => yn[1]~reg0.DATAIN
+xn[2] => yn[2]~reg0.DATAIN
+xn[3] => yn[3]~reg0.DATAIN
+xn[4] => yn[4]~reg0.DATAIN
+xn[5] => yn[5]~reg0.DATAIN
+xn[6] => yn[6]~reg0.DATAIN
+xn[7] => yn[7]~reg0.DATAIN
+yn[0] <= yn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[1] <= yn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[2] <= yn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[3] <= yn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[4] <= yn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[5] <= yn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[6] <= yn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yn[7] <= yn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[0].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[1].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[2].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[3].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[4].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[5].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[6].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[7].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gaussian_fir|sum:SUM[8].sum1s
+A[0] => Add0.IN8
+A[1] => Add0.IN7
+A[2] => Add0.IN6
+A[3] => Add0.IN5
+A[4] => Add0.IN4
+A[5] => Add0.IN3
+A[6] => Add0.IN2
+A[7] => Add0.IN1
+B[0] => Add0.IN16
+B[1] => Add0.IN15
+B[2] => Add0.IN14
+B[3] => Add0.IN13
+B[4] => Add0.IN12
+B[5] => Add0.IN11
+B[6] => Add0.IN10
+B[7] => Add0.IN9
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+

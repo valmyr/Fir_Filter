@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jul 30 14:49:04 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : FIR_Filter_Gaussian
+Top-level Entity Name : gaussian_fir
+Family : Cyclone IV E
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

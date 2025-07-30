@@ -1,4 +1,4 @@
-module gaussian_fir #(parameter WIDTH = 8, NCOEFS = 300)(
+module gaussian_fir #(parameter WIDTH = 8, NCOEFS = 10)(
                         input logic clock,
                         input logic nreset,
                         input logic [WIDTH-1:0] xn,
@@ -11,7 +11,7 @@ module gaussian_fir #(parameter WIDTH = 8, NCOEFS = 300)(
     logic [WIDTH-1:0] product                       ;   
 
 
-    initial $readmemh("txt/coefs_ponto_fixo_q8gauss.txt",coefs);
+    initial $readmemh("../txt/coefs_ponto_fixo_q8gauss.txt",coefs);
 
     //Continuos assigment
     assign zn_delay[0] = xn;
