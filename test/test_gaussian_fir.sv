@@ -1,6 +1,6 @@
 `timescale 1us/1us
 module tb;
-    parameter WIDTH= 32, NCOEFS = 29,SIZE_SIN=1000;
+    parameter WIDTH= 32, NCOEFS = 10,SIZE_SIN=9999;
     logic clock, nreset;
     logic [WIDTH-1:0] xn, yn,coun;
     logic [WIDTH-1:0] sinal [SIZE_SIN-1:0];
@@ -32,7 +32,7 @@ module tb;
             coun <= 0;
         end
         else begin
-             xn <= coun == 0? 0: coun <30 ? 100 :10;//sinal[coun];
+             xn <= sinal[coun];
              coun <= coun +1;
              if(coun==10000)$finish;
         end
